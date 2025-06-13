@@ -5,6 +5,10 @@ import FeatureCards from "@/components/FeatureCards";
 import Globe3DSection from "@/components/Globe3DSection";
 import JourneySection from "@/components/JourneySection";
 import Footer from "@/components/Footer";
+import ActualFooter from "@/components/ActualFooter";
+import DiscoverSection from "@/components/DiscoverSection";
+import ElevateSection from "@/components/ElevateSection";
+import FutureSection from "@/components/FutureSection";
 
 const Index = () => {
   return (
@@ -58,6 +62,18 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* DiscoverSection..... */}
+      <DiscoverSection></DiscoverSection>
+      {/* FutureSection... */}
+      <FutureSection></FutureSection>
+
+
+      {/* ElevateSection */}
+      <ElevateSection></ElevateSection>
+
+      {/* Actual Footer..... */}
+      <ActualFooter></ActualFooter>
     </div>
   );
 };
