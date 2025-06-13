@@ -11,11 +11,10 @@ const FutureSection = () => {
         // You can also add fallback background color here if needed
       }}
     >
+      {/* Floating Shapes */}
       <div className="floating-shape future-sky-1"></div>
       <div className="floating-shape future-orange-1"></div>
       <div className="floating-shape future-orange-2"></div>
-
-
 
       <div className='w-[90%] mx-auto '>
 
