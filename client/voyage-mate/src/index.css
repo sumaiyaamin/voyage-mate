@@ -254,3 +254,99 @@
 .search-shadow {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* ..... */
+@layer components {
+  @keyframes float-shape {
+    0%   { transform: translateX(0) scale(1); }
+    50%  { transform: translateX(30vw) scale(1.1); }
+    100% { transform: translateX(60vw) scale(1); }
+  }
+
+  .floating-shape {
+    @apply absolute rounded-full opacity-80;
+    animation: float-shape 20s linear infinite;
+    /* ensure shapes sit under your content */
+    z-index: 0;
+  }
+
+@keyframes float-right-mid {
+  0% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(-15vw) scale(1.05); }
+  100% { transform: translateX(-30vw) scale(1); }
+}
+
+
+  /* small sky-blue bubbles */
+  .sky-1 {
+    top: 15%;
+    left: 10%;
+    width: 40px; height: 40px;
+    background: linear-gradient(145deg, #38bdf8, #0ea5e9);
+    animation-delay: 0s;
+  }
+  .sky-2 {
+    top: 5%;
+    right: 15%;
+    width: 30px; height: 30px;
+    background: linear-gradient(145deg, #0ea5e9, #38bdf8);
+    animation-delay: 5s;
+  }
+  .sky-3 {
+    bottom: 1%;
+    left: 25%;
+    width: 35px; height: 35px;
+    background: linear-gradient(145deg, #0ea5e9, #38bdf8);
+    animation-delay: 10s;
+  }
+
+  /* orange bubble with “20” inside */
+ .orange-1,
+.orange-2 {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: white;
+  background: linear-gradient(145deg, #fb923c, #f97316);
+  position: absolute;
+  opacity: 0.85;
+  animation: float-shape 20s linear infinite reverse; /* reverse direction */
+  z-index: 0;
+}
+
+/* Individual positions & delays */
+.orange-1 {
+  top: 3%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.orange-2 {
+  top: 15%;
+  right: 5%;
+  width: 30px; height: 30px;
+  font-size: 0.875rem;
+  animation-delay: 2s;
+}
+
+
+/* Orange circle floats from right to center (leftward) */
+.future-orange-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  right: 5%;
+  background: linear-gradient(145deg, #fb923c, #f97316);
+  animation: float-right-mid 18s ease-in-out infinite;
+}
+
+.future-orange-2 {
+  width: 50px;
+  height: 50px;
+  top: 35%;
+  right: 2%;
+  background: linear-gradient(145deg, #fb923c, #f97316);
+  animation: float-right-mid 22s ease-in-out infinite;
+}
+
+}
